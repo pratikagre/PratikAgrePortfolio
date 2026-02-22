@@ -1,0 +1,38 @@
+{
+  "name": "son-nguyen-hoang-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website of Son Nguyen Hoang, showcasing my skills and projects.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --config ./project-config/.prettierrc --write \"packages/js/*.{html,css,js,jsx,ts,tsx}\" \"packages/css/*.{html,css,js,jsx,ts,tsx}\" \"404.html\" \"index.html\"",
+    "install-deps": "npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoangsonww/My-Portfolio-Website.git"
+  },
+  "author": "Son Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoangsonww/My-Portfolio-Website/issues"
+  },
+  "homepage": "https://github.com/hoangsonww/My-Portfolio-Website",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "@google/generative-ai": "^0.22.0",
+    "axios": "^1.7.2",
+    "prettier": "^3.5.1",
+    "swiper": "^6.7.5",
+    "vite": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "eslint-plugin-react": "^7.24.0",
+    "http-server": "^14.1.1"
+  }
+}
