@@ -213,10 +213,13 @@ function scrollActive() {
     const sectionTop = current.offsetTop - 50;
     let sectionId = current.getAttribute('id');
 
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link');
-    } else {
-      document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link');
+    let linkNode = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+    if (linkNode) {
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        linkNode.classList.add('active-link');
+      } else {
+        linkNode.classList.remove('active-link');
+      }
     }
   });
 }
@@ -301,8 +304,10 @@ window.addEventListener('scroll', scrollUp);
 
 function scrollUp1() {
   const scrollUp = document.getElementById('scroll-up1');
-  if (this.scrollY >= 80) scrollUp.classList.add('show-scroll');
-  else scrollUp.classList.remove('show-scroll');
+  if (scrollUp) {
+    if (this.scrollY >= 80) scrollUp.classList.add('show-scroll');
+    else scrollUp.classList.remove('show-scroll');
+  }
 }
 
 window.addEventListener('scroll', scrollUp1);
@@ -374,11 +379,11 @@ async function elizaResponse(message) {
   return removeMarkdown(fullResponse);
 }
 
-console.log(import.meta.env.VITE_API_KEY);
+console.log(import.meta.env ? import.meta.env.VITE_API_KEY : undefined);
 
 function getAIResponse() {
-  const response = import.meta.env.VITE_API_KEY;
-  return atob(response);
+  const response = import.meta.env ? import.meta.env.VITE_API_KEY : undefined;
+  return response ? atob(response) : "";
 }
 
 function removeMarkdown(text) {
