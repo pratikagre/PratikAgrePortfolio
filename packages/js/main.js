@@ -383,7 +383,13 @@ console.log(import.meta.env ? import.meta.env.VITE_API_KEY : undefined);
 
 function getAIResponse() {
   const response = import.meta.env ? import.meta.env.VITE_API_KEY : undefined;
-  return response ? atob(response) : "";
+  if (!response) return "";
+  if (response.startsWith("AIza")) return response;
+  try {
+    return atob(response);
+  } catch (e) {
+    return response;
+  }
 }
 
 function removeMarkdown(text) {
