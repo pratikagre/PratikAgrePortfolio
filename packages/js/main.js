@@ -341,7 +341,7 @@ async function elizaResponse(message) {
   try {
     const genAI = new GoogleGenerativeAI(getAIResponse());
     const model = genAI.getGenerativeModel({
-      model: 'gemini-1.5-flash',
+      model: 'gemini-2.5-flash',
       systemInstruction: import.meta.env.VITE_SYSTEM_INSTRUCTION,
     });
 
