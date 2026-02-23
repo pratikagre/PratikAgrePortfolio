@@ -1,0 +1,17 @@
+{
+  "short_name": "Son Nguyen",
+  "name": "Pratik Agre - Portfolio",
+  "icons": [
+    {
+      "src": "/utils/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#ffffff",
+  "description": "Pratik Agre's professional portfolio showcasing skills in software engineering, business analysis, and a wide range of projects."
+}
