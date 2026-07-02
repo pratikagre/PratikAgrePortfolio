@@ -131,7 +131,7 @@ body {
   margin: 0 0 var(--header-height) 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  background-color: transparent;
   color: var(--text-color);
   transition:
     background-color 0.5s,
@@ -1708,7 +1708,7 @@ body {
 .welcome {
   width: 99vw;
   height: 100vh;
-  background-color: var(--body-color);
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1719,7 +1719,7 @@ body {
 }
 
 body.dark-theme .welcome {
-  background-color: var(--body-color);
+  background-color: transparent;
 }
 
 .welcome__content {
@@ -2194,4 +2194,6 @@ body.dark-theme .welcome {
   height: 100vh;
   z-index: -1;
   pointer-events: none;
+  background-color: var(--body-color);
+  transition: background-color 0.5s;
 }
