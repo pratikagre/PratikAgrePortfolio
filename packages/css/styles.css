@@ -262,19 +262,21 @@ img {
   z-index: var(--z-fixed);
 }
 
-.nav__logo,
+.nav__logo {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-size: 1.35rem;
+}
+
 .nav__toggle {
   color: var(--title-color);
   font-weight: var(--font-medium);
+  font-size: 1.1rem;
+  cursor: pointer;
 }
 
 .nav__logo:hover {
   color: var(--first-color);
-}
-
-.nav__toggle {
-  font-size: 1.1rem;
-  cursor: pointer;
 }
 
 .nav__toggle:hover {
